@@ -22,7 +22,7 @@ switch newInput{2}                                                      %switch 
 end
 
 
-addressBook(end+1)=struct('name',newInput(1),'address',newInput(2),'location', newInput(3), 'orders', struct('Restaurant', {},'Products',  struct('product', {})));      % Save the new account to the structure, new row
+addressBook(end+1)=struct('name',newInput(1),'address',newInput(2),'location', newInput(3), 'orders', struct('Restaurant', {},'Products', {}));      % Save the new account to the structure, new row
 
 
 
