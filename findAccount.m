@@ -18,5 +18,4 @@ else
         case 'Make new account'
             getAddress;
     end
-    
 end

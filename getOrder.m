@@ -75,6 +75,3 @@ end
 
 
 theOrder = struct('Restaurant', restaurantOptions{restaurantBox}, 'Products', {list(indx)});    %save the order to a structure
-
-% theOrder = struct('Restaurant', restaurantOptions{restaurantBox}, 'Products', struct('Products', list(indx)));    %save the order to a structure
-% theOrder1 = struct('Restaurant', 'abc', 'Products', struct('Products', {'abc', 'def', 'ghi'}));
