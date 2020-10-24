@@ -29,8 +29,8 @@ y_res = rowsBP(pos_res);
 plot(x_res,y_res,'or');
 % select destination
 
-pos_des = randi(length(columnsBP));
-while pos_des == pos_res
+pos_des = pos_res;
+while pos_des ~= pos_res
 pos_des = randi(length(columnsBP));
 end
 x_des = columnsBP(pos_des);
@@ -49,17 +49,15 @@ Y_des = y_des;
 %initializing current position of delivery person - function from Kaiyu
 % currently taking two random positions withing the image grid i.e. r x c
 % [r c] = size(mapOfCity);
-pos_del = randi(length(columnsBP));
-while pos_del == pos_res && pos_del == pos_des
+pos_del = pos_res;
+while pos_del ~= pos_res & pos_del ~= pos_des
 pos_del = randi(length(columnsBP));
 end
-pos_del = randi(length(columnsBP));
-X_del = columnsBP(pos_del);
-Y_del = rowsBP(pos_del);
+pos = randi(length(columnsBP));
+X_del = columnsBP(pos);
+Y_del = rowsBP(pos);
 % [X_del, Y_del] = ginput(1);
 plot(X_del,Y_del,'-*g');
-
-buur_del = zoekBuurman(X_del, Y_del, skeletalMap); 
 
 count = 0; %temporary variable
 tmpVar_x_dist = abs(X_del-X_res);

@@ -4,7 +4,9 @@ function [X_src Y_src idx idy] = TrackDelivery2(X_dest, Y_dest, X_src, Y_src, id
 % distance based computation
     tmpVar_x_dist = abs(X_src-X_dest);
     tmpVar_y_dist = abs(Y_src-Y_dest);
+    
     if (tmpVar_x_dist > tmpVar_y_dist ) & idx ~=1
+        
         %if x distance is greater or equal to y distance then advance x
         if X_src < X_dest 
             X_src = X_src+1;
