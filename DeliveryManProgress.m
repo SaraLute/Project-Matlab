@@ -17,7 +17,7 @@ X_prev_src = [X_src]; Y_prev_src = [Y_src]; % storing history of deliverman
 flag = 0; % useful flag to brute force a particular path to delivery man 
 path_history = [flag]; % tracking trajcetory flagsof delivery person
 
-while (X_src ~= X_dst || Y_src ~= Y_dst) && count<1000
+while (X_src ~= X_dst || Y_src ~= Y_dst) && count<1500
     
     % display the delivery man in real time
     if rem(count,10) == 0
