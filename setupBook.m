@@ -1,6 +1,6 @@
 % set-up of structure addressBook
-addressBook=struct('name','Name','address','Address','location', [1,1], 'orders', struct('Restaurant', {},'Products', {}));
 
+addressBook=struct('name','Name','address','Address','location', [1,1], 'orders', struct('Restaurant', {},'Products', {}));
 
 
 % % Brute force means to fix coordinates of the deliveryman - just run once
@@ -33,6 +33,7 @@ DMList(7) = struct('Name','Gosline', 'Location', [86 54], 'Availability', 1);
 % X_res = columns(pos_res);
 % Y_res = rows(pos_res);
 
+
 %Following code is used for creating a structure for the information of
 %location of restaurants.
 restaurantLocations(1) = struct('Name', 'Sushi place', 'Location', [641 524]);
@@ -48,3 +49,4 @@ restaurantLocations(5) = struct('Name', 'Expensive place', 'Location', [679 524]
 % imshow(mapOfRestaurant);
 % hold on;
 % plot(X_res,Y_res,'og','MarkerSize', 15, 'LineWidth', 4);
+

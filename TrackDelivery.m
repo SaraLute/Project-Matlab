@@ -1,6 +1,6 @@
 % The main of delivery processing
 % Here first the coorindates of delivery man, restaurant and destination
-% are provided and it calls two functions:
+% are provided and it calls a single function to track delivery man for both parts of the journey:
 % 1. DeliveryManToRestuarant 
 % 2. RestaurantToDestination
 
