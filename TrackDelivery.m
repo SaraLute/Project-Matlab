@@ -1,8 +1,6 @@
 % The main of delivery processing
 % Here first the coorindates of delivery man, restaurant and destination
-% are provided and it calls two functions:
-% 1. DeliveryManToRestuarant 
-% 2. RestaurantToDestination
+% are provided and it calls a single function to track delivery man for both parts of the journey:
 
 clc;
 clear all;
@@ -37,8 +35,10 @@ pos_des = randi(length(columns));
 X_des = columns(pos_des);
 Y_des = rows(pos_des);
 
-% Here we pass the coorindates of delivery man and restaurant
-[X_res, Y_res, t1] = DeliveryManToRestuarant(X_del, Y_del, X_res, Y_res, TrajectoryMap);
+% Here we pass the coorindates of delivery man and restaurant to tracking
+% function
+[X_res, Y_res, t1] = DeliveryManProgress(X_del, Y_del, X_res, Y_res, TrajectoryMap, 'xb', 'restaurant');
 
-% Here we pass the coordinates of restaurant and destination
-[X_des, Y_des, t2] = RestaurantManToDestination(X_res, Y_res, X_des, Y_des, TrajectoryMap);
+% Here we pass the coordinates of delivery man at restaurant and destination to tracking
+% function
+[X_des, Y_des, t2] = DeliveryManProgress(X_res, Y_res, X_des, Y_des, TrajectoryMap, 'or', 'destination');
