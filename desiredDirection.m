@@ -19,6 +19,4 @@ elseif X_dst < X_src
     T(2,1) = 1;
 end
 
-
-
 end
