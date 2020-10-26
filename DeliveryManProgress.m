@@ -51,6 +51,6 @@ end
 
 % Divinding the total count of steps by 20 to scale the time to minutes
 time = count/20;
-disp(['Delivery person at', destination, ' in ', num2str(time), ' minutes']);
+disp(['Delivery person at ', destination, ' in ', num2str(time), ' minutes']);
 
 end
