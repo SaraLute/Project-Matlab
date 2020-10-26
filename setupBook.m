@@ -1,7 +1,7 @@
 % set-up of structure addressBook
-        % addressBook.orders = struct('Restaurant', 'restaurant', 'Products', []);
+%       
 
-addressBook=struct('name','Name','address','Address','location', 'Location', 'orders', struct('Restaurant', {},'Products', {}));
+addressBook=struct('name','Name','address','Address','location', [1,1], 'orders', struct('Restaurant', {},'Products', {}));
 
 %Following code is used for creating a list of deliverymen.
 %In Practice, "Location" is updated automatically by GPS information,
@@ -21,3 +21,4 @@ restaurantLocations(2) = struct('Name', 'Pizza place', 'Location', [4 2]);
 restaurantLocations(3) = struct('Name', 'Thai place', 'Location', [2.1 6]);
 restaurantLocations(4) = struct('Name', 'Burger place', 'Location', [5 1.8]);
 restaurantLocations(5) = struct('Name', 'Expensive place', 'Location', [3.9 2.7]);
+ 
