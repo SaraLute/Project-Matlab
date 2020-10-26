@@ -34,6 +34,6 @@ restaurantLocations(5) = struct('Name', 'Expensive place', 'Location', [X_res(5)
 figure(1)
 imshow(mapOfRestaurant)
 hold on
-plot(X_res,Y_res,'og','MarkerSize', 15, 'LineWidth', 4);
+plot(X_dst,Y_dst,marker,'MarkerSize', 15, 'LineWidth', 4);
 
  
