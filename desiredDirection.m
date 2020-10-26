@@ -1,7 +1,7 @@
 % function that genreates a 3x3 matric with 1s only in the direction
 % pointing from source towards destination
 
-function T = desiredRichting(X_src, Y_src, X_dst, Y_dst)
+function T = desiredDirection(X_src, Y_src, X_dst, Y_dst)
 
 T = zeros(3);
 

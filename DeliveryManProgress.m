@@ -27,15 +27,15 @@ while (X_src ~= X_dst || Y_src ~= Y_dst) && count<1500
     hold on
       
     % computing next position of delivery man
-    des_dir = desiredRichting(X_src, Y_src, X_dst, Y_dst);
-    buur_del = zoekBuurman(X_src, Y_src, TrajectoryMap);
+    des_dir = desiredDirection(X_src, Y_src, X_dst, Y_dst);
+    Neighborhood_del = searchNeighborhood(X_src, Y_src, TrajectoryMap);
     
     if count == 0
-    [X_src, Y_src, flag] = computeRichting(des_dir, X_src, Y_src, X_prev_src(end),...
-        Y_prev_src(end), buur_del, flag);
+    [X_src, Y_src, flag] = computeDirection(des_dir, X_src, Y_src, X_prev_src(end),...
+        Y_prev_src(end), Neighborhood_del, flag);
     else
-    [X_src, Y_src, flag] = computeRichting(des_dir, X_src, Y_src, X_prev_src(end-1), ...
-        Y_prev_src(end-1), buur_del, flag);
+    [X_src, Y_src, flag] = computeDirection(des_dir, X_src, Y_src, X_prev_src(end-1), ...
+        Y_prev_src(end-1), Neighborhood_del, flag);
 
     end
     

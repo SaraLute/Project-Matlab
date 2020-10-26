@@ -4,7 +4,7 @@
 % path
 % flag = 2 when it encounters a turn
 % flag = 1 when it does not have an alternate but go along available path 
-function [X_del, Y_del, flag] = computeRichting(desDirMat, x, y, x_pr, y_pr, avDirMat, flag)
+function [X_del, Y_del, flag] = computeDirection(desDirMat, x, y, x_pr, y_pr, avDirMat, flag)
 
 prodMat = desDirMat.*avDirMat;
 
