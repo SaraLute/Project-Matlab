@@ -4,9 +4,11 @@
 
 %Determine the location of restaurant in the order.
 Res = theOrder.Restaurant; 
-for k = 1: size(restaurantLocations, 2)
+
+
+for k = 1: size(restaurantLocations,2)
     if (Res == restaurantLocations(k).Name)
-        ResLocation = restaurantLocations(i).Location;
+        ResLocation = restaurantLocations(k).Location;
         break;
     end
 end

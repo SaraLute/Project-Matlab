@@ -6,23 +6,19 @@ boxWidth = [1 35];
 exampleInput = {'name','address'};
 newInput = transpose(inputdlg(prompt,boxName,boxWidth,exampleInput));   % transpose to be able to save it in a structure
 
-switch newInput{2}                                                      % switch to connect inserted address to the locations on our map
-    case '1'                                                            %   strongly depends on how our map will work. For this basic version
-        location = [2,4];                                                   %   the addresses that exist on the map are 1, 2 and 3.
-        newInput{1,3}=location;
-    case '2'
-        location = [4,2];
-        newInput{1,3}=location;
-    case '3'
-        location = [3,3];
-        newInput{1,3}=location;
-    otherwise
-        errordlg('address not in delivery reach','Location Error');    % Show this message when location is not on the map
-end
+
+mapOfDestination = imread('map_destination.png');
+mapOfDestination = im2bw(mat2gray(mapOfDestination), 0.1);
+[rows, columns] = find(mapOfDestination);
+pos_des = randi(length(columns));
+X_des = columns(pos_des);
+Y_des = rows(pos_des);
+
+
+newInput{1,3} = [X_des, Y_des];
 
 
 addressBook(end+1)=struct('name',newInput(1),'address',newInput(2),'location', newInput(3), 'orders', struct('Restaurant', {},'Products', {}));      % Save the new account to the structure, new row
-
 
 
 

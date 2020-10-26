@@ -7,7 +7,7 @@ exampleInput = {'(account)name'};
 inputName = inputdlg(prompt,boxName,boxWidth,exampleInput);
 
 if (any(strcmp({addressBook.name}, char(inputName))))==1    % compares the names in the addressBook to the name that was inputted here
-    disp('it works')
+    disp('Your order is added to your account!')
     next = strcmp({addressBook.name}, char(inputName));
     addressBook(next).orders(end+1) = theOrder;
 else
