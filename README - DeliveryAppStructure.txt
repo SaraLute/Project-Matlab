@@ -3,7 +3,7 @@
 The following app demonstrates food delivery process that comprises of the following process and the respective parents functions:
 1. User following the system and creating an account  (main.m + setupBook.m + getAddress.m)
 2. User making an order to a chosen restaurant (getOrder.m + findAccount.m)
-3. Selection of a delivery person based on the distance to the restaurant (DeliveryMan.m)
+3. Selection of a delivery person who is closest to the restaurant (DeliveryMan.m)
 4. Tracking the position of delivery person from origin to designated restaurant (Track Delivery.m + DeliveryManProgress.m)
 5. Tracking the position of delivery person from restaurant to final address aka destination (Track Delivery.m + DeliveryManProgress.m)
 6. Both the parts (4) and (5) report the time taken by the delivery person.
