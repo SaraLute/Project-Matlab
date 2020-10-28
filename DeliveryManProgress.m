@@ -2,6 +2,11 @@
 % or tracks delivery till it reaches a destination (dst)
 function [X_dst, Y_dst, time] = DeliveryManProgress(X_src, Y_src, X_dst, Y_dst, TrajectoryMap, mapOfCity, colorOfMap, marker, destination)
 
+% if marker=='or'
+% v = VideoWriter('demo2.avi');
+% open(v)
+% end
+
 figure(1)
 % Setup more presentable map of the city and marks the coorindates of
 % source and destination
@@ -25,6 +30,10 @@ while (X_src ~= X_dst || Y_src ~= Y_dst) && count<1500
     
     if rem(count,20) == 0                                                   % display the delivery man's position in real time once in every 1                                                                     
         plot(X_src,Y_src, marker, 'MarkerSize', 10, 'LineWidth', 2);        % min,(time is scaled to 20)
+        A = getframe(gca);
+%         if marker=='or'
+%             writeVideo(v,A);
+%         end
     end
     drawnow
     hold on
@@ -51,5 +60,7 @@ end
 
 time = count/20;                                                            % Divinding the total count of steps by 20 to scale the time to minutes
 disp(['Delivery person at ', destination, ' in ', num2str(time), ' minutes']);
-
+% if marker=='or'
+% close(v)
+% end
 end
